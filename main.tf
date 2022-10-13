@@ -1,12 +1,12 @@
 terraform {
-  required_version = "1.3.2"
   required_providers {
     aws = {
-      source  = "aws"
-      version = "~> 4.3"
+      source = "hashicorp/aws"
+      version = "4.33.0"
     }
   }
-      
+  required_version = ">= 1.1.0"
+  
   cloud {
     organization = "northernelephant"
 
