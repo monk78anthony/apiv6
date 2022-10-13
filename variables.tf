@@ -20,3 +20,9 @@ variable "write_capacity" {
   type        = number
   default     = 10
 }
+
+variable "AWS_ACCESS_KEY_ID" {
+  description = "The name to use for all the cluster resources"
+  type        = string
+  default     = null
+}
