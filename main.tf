@@ -1,10 +1,3 @@
-variable "region" {}
-variable "access_key" {}
-variable "secret_key" {}
-variable "table_name" {}
-variable "read_capacity" {}
-variable "write_capacity" {}
-
 terraform {
   required_providers {
     aws = {
