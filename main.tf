@@ -5,6 +5,23 @@ variable "table_name" {}
 variable "read_capacity" {}
 variable "write_capacity" {}
 
+terraform {
+  required_providers {
+    aws = {
+      source  = "aws"
+      version = "~> 4.3"
+    }
+  }
+      
+  cloud {
+    organization = "northernelephant"
+
+    workspaces {
+      name = "apiv6"
+    }
+  }
+}
+
 resource "aws_dynamodb_table" "apiv6-uat" { 
    name = var.table_name 
    billing_mode = "PROVISIONED" 
