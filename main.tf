@@ -1,3 +1,10 @@
+variable "region" {}
+variable "access_key" {}
+variable "secret_key" {}
+variable "table_name" {}
+variable "read_capacity" {}
+variable "write_capacity" {}
+
 terraform {
   required_providers {
     aws = {
@@ -17,9 +24,9 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
-  AWS_ACCESS_KEY_ID = var.AWS_ACCESS_KEY_ID
-  AWS_SECRET_ACCESS_KEY = var.AWS_SECRET_ACCESS_KEY
+  region     = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
 resource "aws_dynamodb_table" "apiv6-uat" { 
