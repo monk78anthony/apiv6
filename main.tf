@@ -5,12 +5,6 @@ variable "table_name" {}
 variable "read_capacity" {}
 variable "write_capacity" {}
 
-provider "aws" {
-  region     = var.region
-  access_key = var.access_key
-  secret_key = var.secret_key
-}
-
 resource "aws_dynamodb_table" "apiv6-uat" { 
    name = var.table_name 
    billing_mode = "PROVISIONED" 
