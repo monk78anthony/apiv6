@@ -20,10 +20,10 @@ provider "aws" {
 }
 
 resource "aws_dynamodb_table" "apiv6-uat" { 
-   name = var.table_name 
+   name = "apiv6-uat" 
    billing_mode = "PROVISIONED" 
-   read_capacity = var.read_capacity 
-   write_capacity = var.write_capacity
+   read_capacity = "10" 
+   write_capacity = "10"
    hash_key = "band"
    range_key = "title"
    
